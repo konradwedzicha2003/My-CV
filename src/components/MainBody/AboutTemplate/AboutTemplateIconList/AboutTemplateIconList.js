@@ -7,7 +7,7 @@ import bikeRides from "../../../../assets/bikeRides.png";
 import motorbike from "../../../../assets/motorbike.png";
 
 
-const AboutTemplateIconList = ({list}) => {
+const AboutTemplateIconList = ({list, alignPosition}) => {
 
     const renderIcon = (hobby) => {
         switch (hobby) {
@@ -28,7 +28,7 @@ const AboutTemplateIconList = ({list}) => {
 
     const renderIconList = (text) => {
         return (
-            <li>
+            <li key={text}>
                 <div className="about-template-icon-list__icon-wrapper">
                     {renderIcon(text)}
                 </div>

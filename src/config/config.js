@@ -5,7 +5,7 @@ export const AboutMeListTypes = {
     iconList: 'iconList',
 };
 
-export const DotPostitions = {
+export const AlignPositions = {
     left: 'left',
     right: 'right',
 };

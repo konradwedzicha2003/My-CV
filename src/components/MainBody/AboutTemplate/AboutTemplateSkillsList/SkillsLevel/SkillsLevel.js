@@ -22,7 +22,7 @@ const SkillsLevel = ({level, levelCount}) => {
     <div className='skills-level-wrapper'>
       {createSkillsLevels().map(el => {
         return (
-          <div className={`skills-level ${el.isLevelReached ? 'skills-level--reached' : ''}`}/>
+          <div key={el.count} className={`skills-level ${el.isLevelReached ? 'skills-level--reached' : ''}`}/>
         )
       })}
     </div>

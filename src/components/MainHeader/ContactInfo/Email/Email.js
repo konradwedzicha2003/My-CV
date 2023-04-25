@@ -6,11 +6,11 @@ import email from "../../../../assets/email.png";
 const Email = () => {
 
     return (
-        <div class="contact-info__content-box">
-            <div class="contact-info__icon">
+        <div className="contact-info__content-box">
+            <div className="contact-info__icon">
                 <img src={email} alt="email"/>
             </div>
-            <div class="contact-info__email">
+            <div className="contact-info__email">
                 <a href="mailto:konradw2003@interia.pl">konradw2003@interia.pl</a>
             </div>
         </div>

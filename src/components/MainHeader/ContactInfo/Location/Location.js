@@ -6,11 +6,11 @@ import location from "../../../../assets/location.png";
 const Location = () => {
 
     return (
-      <div class="contact-info__content-box">
-        <div class="contact-info__icon">
+      <div className="contact-info__content-box">
+        <div className="contact-info__icon">
             <img src={location} alt="location"/>
         </div>
-        <div class="contact-info__location">
+        <div className="contact-info__location">
             <span>Zagacie ul. Jana III Sobieskiego 52</span>
         </div>
     </div>

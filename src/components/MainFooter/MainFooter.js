@@ -4,9 +4,9 @@ import './main-footer.scss'
 const MainFooter = () => {
 
     return (
-      <div className="main-footer">
+      <footer className="main-footer">
 
-      </div>
+      </footer>
     )
   }
   

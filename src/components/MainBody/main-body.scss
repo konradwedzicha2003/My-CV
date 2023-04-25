@@ -1,0 +1,27 @@
+@import "../../style/variables/variables.scss";
+
+.main-body {
+    background-color: $light-grey;
+    padding: 3rem 0;
+
+    &__left-section, &__right-section {
+    }
+
+    &__division {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 440px) {
+    .main-body {
+        display: flex;
+
+        &__division {
+            display: block;
+            min-width: 0.1rem;
+            background-color: $black;
+        }
+    } 
+}
+

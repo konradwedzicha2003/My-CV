@@ -1,5 +1,4 @@
-@import '../../style/variables/variables/variables.scss';
-@import '../../style/variables/mixins/mixins.scss';
+@import "../../style/variables/variables.scss";
 
 .main-header {
     position: relative;
@@ -9,7 +8,7 @@
 
     &__profession {
         position: absolute;
-        background-color: yellow;
+        background-color: $light-yellow;
         text-align: center;
         font-size: 2rem;
         padding: 1.5rem;

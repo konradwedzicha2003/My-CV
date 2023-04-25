@@ -1,0 +1,40 @@
+@import "../../../../style/variables/variables.scss";
+
+.about-template-dot-list {
+
+    & li {
+        position: relative;
+    }
+
+    & p {
+        width: 100%;
+    }
+
+    &__dot {
+        position: absolute;
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        background-color: $black;
+
+        &--left {
+            right: calc(100% + 0.6rem);
+        }
+
+        &--right {
+            left: calc(100% + 0.6rem);
+        }
+    }
+
+    &__list-element {
+        &--left {
+            text-align: left;
+            margin: 2rem 0 2rem 1.4rem;
+        }
+    
+        &--right {
+            text-align: right;
+            margin: 2rem 1.4rem 2rem 0;
+        }
+    }
+}

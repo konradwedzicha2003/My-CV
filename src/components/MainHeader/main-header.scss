@@ -1,17 +1,53 @@
 @import "../../style/variables/variables.scss";
 
 .main-header {
-    position: relative;
-    @include flex-center-center;
-    flex-direction: column-reverse;
-    background-color: $dark-grey;
+    &__top-section {
+        background-color: $dark-grey;
+    }
+
+    &__bottom-section {
+        box-sizing: border-box;
+        @include flex-center-center;
+        flex-direction: column;
+        background-color: $light-grey;
+
+    }
 
     &__profession {
-        position: absolute;
         background-color: $light-yellow;
         text-align: center;
         font-size: 2rem;
         padding: 1.5rem;
-        margin-bottom: 6rem;
+    }
+    
+    &__profession-box {
+        padding: 2rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .main-header {
+    
+        &__bottom-section {
+            @include flex-around-center;
+            flex-direction: row;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .main-header {
+        &__bottom-section {
+
+        }
+    
+        &__profession {
+            font-size: 3rem;
+            padding: 3rem;
+        }
+
+        &__profession-box {
+            padding: 2rem 22rem 2rem 0;
+        }
     }
 }

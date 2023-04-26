@@ -62,6 +62,15 @@ const MainBody = () => {
 
   return (
     <main className="main-body">
+      <div className="main-body__profile">
+        <AboutTemplate 
+          mainHeader={profile.mainHeader}
+          alignPosition={AlignPositions.left}
+          sections={mapSections(profile.sections)}
+          isSideContent={false}
+        />
+      </div>
+      <div className="main-body__sections-wrapper">
         <section className="main-body__abilities-section">
           <AboutTemplate 
             templateListType={AboutMeListTypes.scoreList} 
@@ -98,19 +107,13 @@ const MainBody = () => {
         <div className="main-body__division"/>
         <section className="main-body__about-me-section">
           <AboutTemplate 
-              mainHeader={profile.mainHeader}
-              alignPosition={AlignPositions.left}
-              sections={mapSections(profile.sections)}
-              isSideContent={false}
-          />
-          <AboutTemplate 
               mainHeader={experience.mainHeader}
               alignPosition={AlignPositions.left}
               sections={mapSections(experience.sections)}
               isSideContent={false}
           />
-
         </section>
+      </div>
     </main> 
   )
 }

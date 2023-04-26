@@ -81,12 +81,12 @@ const AboutTemplate = ({
                 {renderList(list, templateListType)}
                 {sections ? sections.map(section => {
                     return (
-                        <Fragment key={section.primaryHeader}>                    
+                        <div className="about-template__sections-template" key={section.primaryHeader}>                    
                             {renderHeaders(section.primaryHeader, section.secondaryHeader)}
                             {renderSeparator(section.separateParagraphFromHeaders)}
                             {renderParagraph(section.text)}
                             {renderList(section.list, section.listType)}
-                        </Fragment>
+                        </div>
                     )
                 }) : undefined}
             </div>

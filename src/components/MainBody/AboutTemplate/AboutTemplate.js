@@ -47,8 +47,8 @@ const AboutTemplate = ({
     const renderHeaders = (primaryHeader, secondaryHeader) => {
         return (
             <>
-                {primaryHeader ? <h2 className={defineHeadersClass()}>{primaryHeader}</h2> : undefined}
-                {secondaryHeader ? <h3 className={defineHeadersClass()}>{secondaryHeader}</h3> : undefined}
+                {primaryHeader? <h2 className={defineHeadersClass()}>{primaryHeader}</h2> : undefined}
+                {secondaryHeader? <h3 className={defineHeadersClass()}>{secondaryHeader}</h3> : undefined}
             </>
         )
     }
@@ -70,16 +70,24 @@ const AboutTemplate = ({
             separateParagraphFromHeaders ? <div className="about-template__division"/> : undefined
         )
     }
+ 
+    const renderSingleSectionTemplate = () => {
+        if (!sections) {
+            return (
+                <>                        
+                    {renderHeaders(primaryHeader, secondaryHeader)}
+                    {renderSeparator(separateParagraphFromHeaders)}
+                    {renderParagraph(text)}
+                    {renderList(list, templateListType)}
+                </>
+            )
+        }
+    }
 
-    return (
-        <div className={`about-template ${isSideContent ? 'about-template--side-content' : 'about-template--main-content'}`}>
-            <div className="about-template__wrapper">
-                {mainHeader ? <header className={defineHeadersClass()}>{mainHeader}</header> : undefined}
-                {!sections ? renderHeaders(primaryHeader, secondaryHeader) : undefined}
-                {!sections ? renderSeparator(separateParagraphFromHeaders) : undefined}
-                {renderParagraph(text)}
-                {renderList(list, templateListType)}
-                {sections ? sections.map(section => {
+    const renderMultiSectionTemplate = () => {
+        if (sections) {
+            return (
+                sections.map(section => {
                     return (
                         <div className="about-template__sections-template" key={section.primaryHeader}>                    
                             {renderHeaders(section.primaryHeader, section.secondaryHeader)}
@@ -88,7 +96,17 @@ const AboutTemplate = ({
                             {renderList(section.list, section.listType)}
                         </div>
                     )
-                }) : undefined}
+                })
+            )
+        }
+    }
+
+    return (
+        <div className={`about-template ${isSideContent ? 'about-template--side-content' : 'about-template--main-content'}`}>
+            <div className="about-template__wrapper">
+                {mainHeader ? <header className={defineHeadersClass()}>{mainHeader}</header> : undefined}
+                {renderSingleSectionTemplate()}
+                {renderMultiSectionTemplate()}
             </div>
         </div>
     )

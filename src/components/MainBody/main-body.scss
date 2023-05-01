@@ -1,12 +1,7 @@
 @import "../../style/variables/variables.scss";
 
 .main-body {
-    background-color: $light-grey;
     min-width: 10rem;
-
-    &__profile {
-        background-color: $dark-grey;
-    }
 
     &__division {
         display: none;
@@ -28,10 +23,7 @@
         }
 
         &__division {
-            display: block;
-            min-width: 0.1rem;
-            margin: 3rem 0;
-            background-color: $black;
+            @include dividing-line 
         }
     } 
 }

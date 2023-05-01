@@ -150,7 +150,7 @@ export const AboutMeConfig = {
                 ],
             },
             {
-                header: 'Entering data on nordski.pl',
+                header: 'Entering data on a site collecting ski resorts from Europe',
                 text: 'For a short period of time I was responsible for entering data on nordski site. It wasn\'t a very educational time when it comes to learning programming but it surely helped me with being more open to seeking information from a variety of sources.',
                 separateParagraphFromHeaders: true,
             },

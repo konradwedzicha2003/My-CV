@@ -8,6 +8,7 @@
         justify-content: left;
         align-items: center;
         margin-bottom: 1rem;
+        font-size: 1.5rem;
     }
 
     & a {
@@ -34,6 +35,7 @@
         padding: 3rem 9rem 1rem 9rem;
 
         &__content-box {
+            font-size: inherit;
             margin-bottom: 2rem;
 
             &:last-child {

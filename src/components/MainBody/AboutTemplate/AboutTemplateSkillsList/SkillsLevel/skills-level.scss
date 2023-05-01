@@ -6,13 +6,20 @@
 }
 
 .skills-level {
-    width: 2rem;
-    height: 2rem;
+    width: 1.4rem;
+    height: 1.4rem;
     border-radius: 50%;
-    background-color: $skill-default;
+    background-color: $light-grey;
     margin: 0.2rem;
 
     &--reached {
-        background-color: $skill-reached;
+        background-color: $very-dark-grey;
     }
+}
+
+@media screen and (min-width: 600px) {
+    .skills-level  {
+        width: 2rem;
+        height: 2rem;
+    } 
 }

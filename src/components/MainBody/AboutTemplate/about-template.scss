@@ -18,7 +18,7 @@
     & h2 {
         font-size: 2rem;
         line-height: 3rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     & h3 {
@@ -51,6 +51,14 @@
 
     & li:last-child {
         margin-bottom: 0;
+    }
+
+    &__list-element-align-right p {
+        text-align: right;
+    }
+
+    &__list-element-align-left p {
+        text-align: left;
     }
 
     &--main-content {

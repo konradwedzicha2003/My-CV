@@ -1,5 +1,6 @@
 import React from "react";
 import './about-template-score-list.scss'
+import { defineListAlignClass } from "../AboutTemplate";
 
 const AboutTemplateScoreList = ({list, alignPosition}) => {
 
@@ -9,7 +10,7 @@ const AboutTemplateScoreList = ({list, alignPosition}) => {
             <ul>
                 {list.map(el => {
                     return (
-                        <li key={el.text + el.score}>
+                        <li className={defineListAlignClass(alignPosition)} key={el.text + el.score}>
                             <span>{el.text}</span>
                             <span>{el.score}%</span>
                         </li>

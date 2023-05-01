@@ -6,6 +6,16 @@ import AboutTemplateDotList from "./AboutTemplateDotList/AboutTemplateDotList";
 import AboutTemplateSkillsList from "./AboutTemplateSkillsList/AboutTemplateSkillsList";
 import AboutTemplateIconList from "./AboutTemplateIconList/AboutTemplateIconList";
 
+export const defineListAlignClass = (alignPosition) => {
+    switch (alignPosition) {
+        case 'left':
+            return 'about-template__list-element-align-left'
+        case 'right':
+            return 'about-template__list-element-align-right'
+        default: 
+            return ''
+    }
+}
 
 const AboutTemplate = ({ 
     templateListType, 
@@ -30,6 +40,8 @@ const AboutTemplate = ({
                 return <AboutTemplateSkillsList list={list} alignPosition={alignPosition}/>
             case AboutMeListTypes.iconList:
                 return <AboutTemplateIconList list={list} alignPosition={alignPosition}/>
+            default:
+                return ''
         }
     }
 

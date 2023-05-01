@@ -4,6 +4,24 @@ import AboutTemplate from "./AboutTemplate/AboutTemplate";
 import { AboutMeConfig } from "../../data/info/AboutMeConfig";
 import { AboutMeListTypes, AlignPositions } from "../../config/config"
 
+export const mapSections = (sections) => {
+  return sections.map(section => {
+    return {
+      primaryHeader: section.header,
+      text: section.text,
+      separateParagraphFromHeaders: section.separateParagraphFromHeaders,
+      list: section.list?.map(sectionListElement => {
+        const objectArr = Object.entries(sectionListElement);
+
+        return {
+          text: sectionListElement[objectArr[0][0]],
+        }
+      }),
+      listType: section.listType
+    }
+  }) 
+}
+
 const MainBody = () => {
 
   const {
@@ -11,7 +29,6 @@ const MainBody = () => {
     skills,
     achievements,
     hobby,
-    profile,
     experience,
   } =  AboutMeConfig;
 
@@ -42,34 +59,8 @@ const MainBody = () => {
     }
   })
 
-  const mapSections = (sections) => {
-    return sections.map(section => {
-      return {
-        primaryHeader: section.header,
-        text: section.text,
-        separateParagraphFromHeaders: section.separateParagraphFromHeaders,
-        list: section.list?.map(sectionListElement => {
-          const objectArr = Object.entries(sectionListElement);
-  
-          return {
-            text: sectionListElement[objectArr[0][0]],
-          }
-        }),
-        listType: section.listType
-      }
-    }) 
-  }
-
   return (
     <main className="main-body">
-      <div className="main-body__profile">
-        <AboutTemplate 
-          mainHeader={profile.mainHeader}
-          alignPosition={AlignPositions.left}
-          sections={mapSections(profile.sections)}
-          isSideContent={false}
-        />
-      </div>
       <div className="main-body__sections-wrapper">
         <section className="main-body__abilities-section">
           <AboutTemplate 

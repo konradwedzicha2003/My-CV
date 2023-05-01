@@ -1,6 +1,8 @@
+@import "../../../style/variables/variables.scss";
+
 .photo-section {
-    width: 14rem;
-    padding-top: 2rem;
+    box-sizing: border-box;
+    max-width: 35rem;
 
     & img {
         width: 100%;
@@ -9,14 +11,56 @@
     }
 
     & figcaption {
+        position: relative;
+        padding: 0.9rem;
         text-align: center;
-        width: 100%;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.15rem;
+    }
+
+    & .figcaption-line {
+        position: absolute;
+        background-color: $black;
+
+        &__vertical {
+            width: 0.2rem;
+            height: 40%;
+
+            &--top-left {
+                top: 0;
+                left: 0;
+            }
+
+            &--bottom-right {
+                bottom: 0;
+                right: 0;
+            }
+        }
+
+        &__horizontal {
+            height: 0.2rem;
+            width: 20%;
+
+            &--top-left {
+                top: 0;
+                left: 0;
+            }
+            
+            &--bottom-right {
+                bottom: 0;
+                right: 0;
+            }
+        }
     }
 }
 
 @media screen and (min-width: 800px) {
     .photo-section {
-        width: 20rem;
-        padding: 2rem 0 2rem 20rem;
+
+        & figcaption {
+            font-size: 2rem;
+        }
     } 
 }
+

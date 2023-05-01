@@ -1,53 +1,89 @@
 @import "../../style/variables/variables.scss";
 
 .main-header {
-    &__top-section {
-        background-color: $dark-grey;
-    }
 
     &__bottom-section {
         box-sizing: border-box;
-        @include flex-center-center;
+        display: flex;
+        align-items: center;
         flex-direction: column;
-        background-color: $light-grey;
+        padding: 4rem;
+    }
 
+    &__profession-box {
+        margin: 1rem 0;
     }
 
     &__profession {
         background-color: $light-yellow;
         text-align: center;
         font-size: 2rem;
-        padding: 1.5rem;
-    }
-    
-    &__profession-box {
-        padding: 2rem;
+        padding: 1.5rem 4rem;
+        line-height: 2rem;
+        max-width: 25rem;
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 500px) {
     .main-header {
-    
-        &__bottom-section {
-            @include flex-around-center;
-            flex-direction: row;
-        }
-    }
-}
-
-@media screen and (min-width: 800px) {
-    .main-header {
-        &__bottom-section {
-
-        }
-    
         &__profession {
-            font-size: 3rem;
+            padding: 1.5rem 7rem;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .main-header {
+        &__profession {
+            padding: 1.5rem 5rem;
+        }
+
+        &__bottom-section {
+            padding: 3rem 9rem;
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .main-header {
+        &__profession {
+            padding: 1.5rem 8rem;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .main-header {
+        &__profession {
+            padding: 1.5rem 9rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .main-header {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 3rem 10rem;
+
+        &__bottom-section {
+            max-width: 25rem;
             padding: 3rem;
         }
 
-        &__profession-box {
-            padding: 2rem 22rem 2rem 0;
+        &__profession {
+            padding: 1.5rem 5rem;
+            margin-top: 6rem;
         }
+
+        &__division {
+            @include dividing-line 
+        }
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .main-header {
+        padding: 3rem 16rem;
     }
 }

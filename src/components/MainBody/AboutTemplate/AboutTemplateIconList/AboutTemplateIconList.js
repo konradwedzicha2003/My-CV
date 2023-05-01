@@ -5,7 +5,7 @@ import games from "../../../../assets/games.png";
 import walks from "../../../../assets/walks.png";
 import bikeRides from "../../../../assets/bikeRides.png";
 import motorbike from "../../../../assets/motorbike.png";
-
+import { defineListAlignClass } from "../AboutTemplate";
 
 const AboutTemplateIconList = ({list, alignPosition}) => {
 
@@ -28,7 +28,7 @@ const AboutTemplateIconList = ({list, alignPosition}) => {
 
     const renderIconList = (text) => {
         return (
-            <li key={text}>
+            <li className={defineListAlignClass(alignPosition)} key={text}>
                 <div className="about-template-icon-list__icon-wrapper">
                     {renderIcon(text)}
                 </div>

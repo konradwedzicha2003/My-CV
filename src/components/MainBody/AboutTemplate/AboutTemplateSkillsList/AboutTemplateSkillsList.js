@@ -1,6 +1,7 @@
 import React from "react";
 import './about-template-skills-list.scss'
 import SkillsLevel from "./SkillsLevel/SkillsLevel";
+import { defineListAlignClass } from "../AboutTemplate";
 
 const AboutTemplateSkillsList = ({list, alignPosition}) => {
 
@@ -10,7 +11,7 @@ const AboutTemplateSkillsList = ({list, alignPosition}) => {
             <ul>
                 {list.map(el => {
                     return (
-                        <li key={el.skill}>
+                        <li className={defineListAlignClass(alignPosition)} key={el.skill}>
                             <SkillsLevel level={el.level} levelCount={5}/>
                             <p>
                                 {el.skill}

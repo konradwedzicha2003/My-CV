@@ -2,7 +2,7 @@
 
 .photo-section {
     box-sizing: border-box;
-    max-width: 35rem;
+    padding: 3rem 3rem 0 3rem;
 
     & img {
         width: 100%;
@@ -15,6 +15,7 @@
         padding: 0.9rem;
         text-align: center;
         font-weight: 700;
+        font-size: $font-text-main;
         margin-bottom: 0.5rem;
         letter-spacing: 0.15rem;
     }
@@ -55,9 +56,16 @@
     }
 }
 
+@media screen and (min-width: 600px) {
+    .photo-section {
+        padding: 0;
+    } 
+}
+
+
+
 @media screen and (min-width: 800px) {
     .photo-section {
-
         & figcaption {
             font-size: 2rem;
         }

@@ -2,29 +2,23 @@ import React from "react";
 import './about-template-dot-list.scss'
 
 const AboutTemplateDotList = ({list, alignPosition}) => {
+
     const renderProperDotListElement = (text) => {
-        switch (alignPosition) {
-            case 'left':
-                return (
-                    <li key={text} className="about-template-dot-list__list-element about-template-dot-list__list-element--left">
-                        <div className="about-template-dot-list__dot about-template-dot-list__dot--left"/>
-                        <p>{text}</p>
-                    </li>
-                )
-            case 'right': 
-                return (
-                    <li key={text} className="about-template-dot-list__list-element about-template-dot-list__list-element--right">
-                        <div className="about-template-dot-list__dot about-template-dot-list__dot--right"/>
-                        <p>{text}</p>
-                    </li>
-                )
-            default:
-                return (
-                    <li key={text} className="about-template-dot-list__list-element">
-                        <p>{text}</p>
-                    </li>
-                )
-        }    
+        return (
+            <li 
+            key={text} 
+            className={`about-template-dot-list__list-element ${
+                alignPosition === 'left' ? 'about-template-dot-list__list-element--left' : 'about-template-dot-list__list-element--right'}`}
+            >
+                {alignPosition 
+                ?   <div 
+                    className={`about-template-dot-list__dot ${
+                        alignPosition === 'left' ? 'about-template-dot-list__dot--left' : 'about-template-dot-list__dot--right'}`}
+                    /> 
+                : undefined}
+                <p>{text}</p>
+            </li>
+        )
     }
 
     return (

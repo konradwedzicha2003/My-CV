@@ -42,6 +42,7 @@ const MainBody = () => {
   const mapHobbyList = hobby.hobbyList.map(el => {
     return {
       text: el.hobby,
+      icon: el.icon,
     }
   })
 
@@ -61,50 +62,48 @@ const MainBody = () => {
 
   return (
     <main className="main-body">
-      <div className="main-body__sections-wrapper">
-        <section className="main-body__abilities-section">
-          <AboutTemplate 
-            templateListType={AboutMeListTypes.scoreList} 
-            text={education.text} 
-            mainHeader={education.mainHeader}
-            primaryHeader={education.primaryHeader} 
-            secondaryHeader={education.secondaryHeader} 
-            list={mapMaturaResults}
-            alignPosition={AlignPositions.right}
-            isSideContent={true}
-          />
-          <AboutTemplate 
-            templateListType={AboutMeListTypes.skillsList} 
-            mainHeader={skills.header}
-            list={mapSkillsList} 
-            alignPosition={AlignPositions.right}
-            isSideContent={true}
-          />
-          <AboutTemplate 
-            templateListType={AboutMeListTypes.dotList} 
-            mainHeader={achievements.header}
-            list={mapAchievementsList}
-            alignPosition={AlignPositions.right}
-            isSideContent={true}
-          />
-          <AboutTemplate 
-            templateListType={AboutMeListTypes.iconList} 
-            mainHeader={hobby.header}
-            list={mapHobbyList} 
-            alignPosition={AlignPositions.right}
-            isSideContent={true}
-          />
-        </section>
-        <div className="main-body__division"/>
-        <section className="main-body__about-me-section">
-          <AboutTemplate 
-              mainHeader={experience.mainHeader}
-              alignPosition={AlignPositions.left}
-              sections={mapSections(experience.sections)}
-              isSideContent={false}
-          />
-        </section>
-      </div>
+      <section className="main-body__abilities-section">
+        <AboutTemplate 
+          templateListType={AboutMeListTypes.scoreList} 
+          text={education.text} 
+          mainHeader={education.mainHeader}
+          primaryHeader={education.primaryHeader} 
+          secondaryHeader={education.secondaryHeader} 
+          list={mapMaturaResults}
+          alignPosition={AlignPositions.right}
+          isSideContent={true}
+        />
+        <AboutTemplate 
+          templateListType={AboutMeListTypes.skillsList} 
+          mainHeader={skills.header}
+          list={mapSkillsList} 
+          alignPosition={AlignPositions.right}
+          isSideContent={true}
+        />
+        <AboutTemplate 
+          templateListType={AboutMeListTypes.dotList} 
+          mainHeader={achievements.header}
+          list={mapAchievementsList}
+          alignPosition={AlignPositions.right}
+          isSideContent={true}
+        />
+        <AboutTemplate 
+          templateListType={AboutMeListTypes.iconList} 
+          mainHeader={hobby.header}
+          list={mapHobbyList} 
+          alignPosition={AlignPositions.right}
+          isSideContent={true}
+        />
+      </section>
+      <div className="main-body__division"/>
+      <section className="main-body__about-me-section">
+        <AboutTemplate 
+            mainHeader={experience.mainHeader}
+            alignPosition={AlignPositions.left}
+            sections={mapSections(experience.sections)}
+            isSideContent={false}
+        />
+      </section>
     </main> 
   )
 }

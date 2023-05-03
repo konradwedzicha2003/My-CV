@@ -1,14 +1,15 @@
 @import "../../../style/variables/variables.scss";
 
 .contact-info {
-    padding: 2rem 0;
+    padding: 0 3rem;
+    margin-top: 2.5rem;
+    font-size: 1.2rem;
 
     &__content-box {
         display: flex;
         justify-content: left;
         align-items: center;
-        margin-bottom: 1rem;
-        font-size: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     & a {
@@ -32,23 +33,45 @@
 
 @media screen and (min-width: 600px) {
     .contact-info {
-        padding: 3rem 9rem 1rem 9rem;
+        padding: 1rem 9rem 1rem 9rem;
 
         &__content-box {
             font-size: inherit;
-            margin-bottom: 2rem;
-
-            &:last-child {
-                margin: 0;
-            }
         }
     } 
 }
 
 
+@media screen and (min-width: 1000px) {
+    .contact-info {
+        margin: 0;
+        padding: 3rem 3rem 0;
+
+        &__icon {
+            max-width: 1.6rem;
+            max-height: 1.6rem;
+            min-width: 1.6rem;
+            min-height: 1.6rem;
+        }
+
+        &__content-box {
+            margin-bottom: 1.5rem;
+        }
+    } 
+}
+
 @media screen and (min-width: 1100px) {
     .contact-info {
-        padding: 0;
-        margin-top: 2rem;
+        &__content-box {
+            padding-right: 1rem;
+        }
+    } 
+}
+
+@media screen and (min-width: 1700px) {
+    .contact-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8rem;
     } 
 }

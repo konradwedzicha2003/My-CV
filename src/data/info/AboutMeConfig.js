@@ -1,11 +1,16 @@
 import { AboutMeListTypes } from "../../config/config";
+import challenges from "../../assets/challenges.png"
+import bikeRides from "../../assets/bikeRides.png"
+import games from "../../assets/games.png"
+import motorbike from "../../assets/motorbike.png"
+
 
 export const AboutMeConfig = {
     education: {
         mainHeader: 'EDUCATION',
         primaryHeader: 'Complex of Schools and Educational Institutions in Skała',
         secondaryHeader: '2019-2022',
-        text: 'During my three year stay at this school, I have gained many interesting, but not connected with programming skills, yet this school helped me polish my English skills which made it easier for me to enter the IT world. My matura exams ended with results:',
+        text: 'Graduated with matura final exam results:',
         maturaResults: [
             {
                 subject: 'Polish basic level',
@@ -22,10 +27,6 @@ export const AboutMeConfig = {
             {
                 subject: 'English extended level',
                 score: 96,
-            },
-            {
-                subject: 'Maths extended level',
-                score: 14,
             },
         ],
     },
@@ -73,18 +74,19 @@ export const AboutMeConfig = {
         hobbyList: [
             {
                 hobby: 'CSS & JS challenges',
+                icon: challenges,
             },
             {
                 hobby: 'Computer games',
-            },
-            {
-                hobby: 'Walks in the fresh air',
+                icon: games,
             },
             {
                 hobby: 'Long bike rides over 100km',
+                icon: bikeRides,
             },
             {
                 hobby: 'Motorbikes',
+                icon: motorbike,
             },
         ],
     },
@@ -92,9 +94,9 @@ export const AboutMeConfig = {
     profile: {
         mainHeader: 'Profile',
         sections: [ 
-            {
+            {   
                 header: 'A little bit about me',
-                text: 'I am a 19 year old high school graduate of which interests at some point turned towards the IT industry. It happened right before my high school started, I wasn\'t feeling completely right with my school choice even though it was a really fun experience. But then I thought to myself that it is not what I really want to do in the future. Because of my cousins proposal I got interested in IT industry and started learning some basic things. As the time was passing by I wanted to know more and more about various things in programming and I still do even when things get hard and don\'t go so smoothly. Yet I know I am still inexperienced in many ways that\'s why I am not giving up and I am open to learn more things that can help me with getting better at this job, do things faster, easier and more correctly.',
+                text: 'I am a 20 year old ambitious high school graduate, who is a self learner with open mind and eager to learn more about IT industry.',
                 separateParagraphFromHeaders: true,
             },
         ],
@@ -103,9 +105,18 @@ export const AboutMeConfig = {
     experience: {
         mainHeader: 'EXPERIENCE',
         sections: [ 
+                        {
+                header: 'Previous jobs',
+                separateParagraphFromHeaders: true,
+                listType: AboutMeListTypes.dotList,
+                list: [
+                    {
+                        job: 'Intern at TINT (tintup.com) from December 2022 to May 2023',
+                    },
+                ],
+            },
             {
                 header: 'Courses',
-                text: 'From the start of my programming journey, I was looking for people, who can help me with getting closer to my goals. On my way I found EDUWEB, Ultimate Courses and many free tutorials on youtube. On EDUWEB I learned about basics and later about more advanced functions of Javascript and on Ultimate Courses I learned about basics of React. In the meantime I watched many youtube courses that helped me with understanding some most basic things like CSS animations HTML semantics etc. Here ore the courses I\'ve done:',
                 separateParagraphFromHeaders: true,
                 listType: AboutMeListTypes.dotList,
                 list: [
@@ -121,14 +132,11 @@ export const AboutMeConfig = {
                 ],
             },
             {
-                header: 'Practical mini projects',
-                text: 'To understand how HTML CSS and Js works, I made over a dozen of mini projects, in which by using trial and error method I was trying to make my app look identical to the ones already existing using HTML and CSS, or to give it some functionality using JS. Here is the list of my bigger \'mini projects\' :',
+                header: 'Practical projects',
+                text: 'These are my own projects that I have done to learn about new things, technologies and to gain confidence in my work:',
                 separateParagraphFromHeaders: true,
                 listType: AboutMeListTypes.dotList,
                 list: [
-                    {
-                        project: 'Onet - 1 to 1 copy of news site - HTML, CSS',
-                    },
                     {
                         project: 'X-kom - 1 to 1 copy of online shop - HTML, BEM, CSS',
                     },
@@ -142,17 +150,12 @@ export const AboutMeConfig = {
                         project: 'Tags - simple template allowing to choose some tag or search it in input if they are too many tags - HTML, BEM, CSS, JS - functional programming',
                     },
                     {
-                        project: 'To do list - small program allowing to write some task and save it, change order of tasks when there are many or delete any of them - HTML, BEM, CSS, REACT',
+                        project: 'To do list - small program allowing to write some task and save them, change order of tasks when there are many or delete any of them - HTML, BEM, CSS, REACT',
                     },
                     {
-                        project: 'Millionaires - fully functional game allowing to chose one of 4 answers to any question, use lifebuoys to get some help, progress through 15 questions up to the end and restart game without refreshing site- HTML, BEM, RWD, CSS - animations, REACT,',
+                        project: 'Millionaires - fully functional game allowing to chose one of 4 answers to any question, use lifebuoys to get some help, progress through 15 questions up to the end and restart game without refreshing site- HTML, BEM, RWD, CSS - animations, Typescript, REACT',
                     },
                 ],
-            },
-            {
-                header: 'Entering data on a site collecting ski resorts from Europe',
-                text: 'For a short period of time I was responsible for entering data on nordski site. It wasn\'t a very educational time when it comes to learning programming but it surely helped me with being more open to seeking information from a variety of sources.',
-                separateParagraphFromHeaders: true,
             },
         ],
     

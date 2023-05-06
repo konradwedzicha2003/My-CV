@@ -18,11 +18,23 @@
         font-size: $font-text-main;
         margin-bottom: 0.5rem;
         letter-spacing: 0.15rem;
+        overflow: hidden;
+
+        &:hover {
+            
+            .figcaption-line__vertical {
+                transform: scaleY(4);
+            }
+            .figcaption-line__horizontal {
+                transform: scaleX(9);
+            }
+        }
     }
 
     & .figcaption-line {
         position: absolute;
         background-color: $black;
+        transition: transform 1s ease-in-out;
 
         &__vertical {
             width: 0.2rem;

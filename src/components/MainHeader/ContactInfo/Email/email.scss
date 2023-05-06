@@ -1,0 +1,8 @@
+.contact-info__email {
+    &:hover {
+        .contact-info__underline {
+        transform: scaleX(190);
+        opacity: 1;
+        }
+    }
+}

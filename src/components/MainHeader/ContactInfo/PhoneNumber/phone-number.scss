@@ -1,0 +1,8 @@
+.contact-info__phone-number {
+    &:hover {
+        .contact-info__underline {
+            transform: scaleX(140);
+            opacity: 1;
+        }
+    }
+}

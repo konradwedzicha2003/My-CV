@@ -96,7 +96,7 @@ export const AboutMeConfig = {
         sections: [ 
             {   
                 header: 'A little bit about me',
-                text: 'I am a 20 year old ambitious high school graduate, who is a self learner with open mind and eager to learn more about IT industry.',
+                text: 'I am a 20 years old ambitious high school graduate, who is a self learner with open mind and eager to learn more about IT industry.',
                 separateParagraphFromHeaders: true,
             },
         ],

@@ -9,9 +9,9 @@ import AboutTemplateIconList from "./AboutTemplateIconList/AboutTemplateIconList
 export const defineListAlignClass = (alignPosition) => {
     switch (alignPosition) {
         case 'left':
-            return 'about-template__list-element-align-left'
+            return 'about-template__list-element-align-left';
         case 'right':
-            return 'about-template__list-element-align-right'
+            return 'about-template__list-element-align-right';
         default: 
             return ''
     }
@@ -48,9 +48,9 @@ const AboutTemplate = ({
     const defineHeadersClass = () => {
         switch (alignPosition) {
             case 'left':
-                return 'about-template__header-align-left'
+                return 'about-template__header-align-left';
             case 'right':
-                return 'about-template__header-align-right'
+                return'about-template__header-align-right';
             default: 
                 return ''
         }

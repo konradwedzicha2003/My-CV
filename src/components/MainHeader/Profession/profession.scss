@@ -1,14 +1,46 @@
 @import "../../../style/variables/variables.scss";
+@import "../../../style/animations/animations.scss";
 
 .profession {
     padding: 0 3rem;
 
     &__inner {
+        position: relative;
         background-color: $light-yellow;
         text-align: center;
         font-size: 2rem;
         padding: 1.5rem 4rem;
         line-height: 2.4rem;
+
+        &:hover {
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                background: rgba(255, 255, 255, 0.5);
+                height: 100%;
+                top: 0;
+                filter: blur(5px);
+                width: 8rem;
+                transform: translateX(-19rem) skewX(-15deg);
+                animation: rating-stars-shining 0.5s linear;
+            }
+        
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                background: rgba(255, 255, 255, 0.5);
+                height: 100%;
+                top: 0;
+                filter: blur(5px);
+                width: 8rem;
+                transform: translateX(-19rem) skewX(-15deg);
+                animation: rating-stars-shining 0.5s linear;
+            }
+        }
+        
+
     }
 }
 

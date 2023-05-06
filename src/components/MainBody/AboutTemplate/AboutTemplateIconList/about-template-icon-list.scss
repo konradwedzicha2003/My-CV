@@ -1,3 +1,5 @@
+@import "../../../../style/animations/animations.scss";
+
 .about-template-icon-list {
 
     &__icon-wrapper {
@@ -7,6 +9,42 @@
         & img {
             width: 100%;
             height: 100%;
+        }
+    }
+
+    &__challenges {
+        &:hover {
+            div {
+                animation: challenges 4s linear forwards
+            }
+        }
+    }
+
+    &__games {
+        &:hover {
+            div {
+                animation: games 1.6s forwards;
+            }
+        }  
+    }
+
+    &__bike-rides {
+        &:hover {
+            div {
+                animation: bike-rides 2s ease-in-out forwards;
+            }
+        }
+    }
+
+    &__motorbikes {
+        &:hover {
+            div {
+                animation: motorbikes-forward 1s forwards;
+            }
+
+            img {
+                animation: motorbikes-up 1s forwards;
+            }
         }
     }
 }

@@ -1,2 +1,23 @@
+@import "../../../../style/variables/variables.scss";
+
 .about-template-skills-list {
+    li {
+        justify-content: center;
+        flex-direction: column-reverse;
+        margin-bottom: 3rem;
+
+        p {
+            margin-bottom: 0.7rem;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .about-template-skills-list {
+        li {
+            justify-content: space-between;
+            flex-direction: row;
+            margin-bottom: 2rem;
+        }
+    } 
 }

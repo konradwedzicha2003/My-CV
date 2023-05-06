@@ -26,12 +26,8 @@
         margin: 1rem 0;
     }
 
-    &__header-align-left {
-        text-align: left;
-    }
-
-    &__header-align-right {
-        text-align: right;
+    &__header-align-left, &__header-align-right {
+        text-align: center;
     }
 
     &__paragraph {
@@ -89,6 +85,18 @@
 
         & header {
             font-size: $font-header-big;
+        }
+    } 
+}
+
+@media screen and (min-width: 800px) {
+    .about-template {
+        &__header-align-left {
+            text-align: left;
+        }
+        
+        &__header-align-right {
+            text-align: right;
         }
     } 
 }
